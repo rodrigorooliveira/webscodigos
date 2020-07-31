@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "id": 2,
+      "name": "Daniel Rodrigues",
+      "email": "mjds@empresa.com"
+    },
+    {
+      "name": "rodrigo ro",
+      "email": "msf@rodrigorooliveira@gmail.com",
+      "id": 3
+    }
+  ]
+}
