@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Diretiva Personalizada</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+    <script src="/js/vue.min.js"></script>
+</head>
+<body class="exercicio">
+    <div id="app">
+        <input type="text" v-model="nome">
+        <div v-inverter="nome"></div> <!--A diretiva v-inverter não existe no Vue-->
+     </div> 
+    
+
+    <script>
+        //vamos partir para criação da diretiva abaixo:
+        Vue.directive('inverter', { //<<==Nome da diretiva criada na div acima
+            componentUpdate(el, binding) {
+                const invertido = binding.value.split('')
+                   .reverse().join('')
+                el.innerHTML = invertido
+            }
+        })
+
+        new Vue({
+            el: "#app",
+            data: {
+                nome: ''
+            }
+        })
+    </script>
+</body>
+</html>
